@@ -17,6 +17,7 @@ public class Main {
         {
         if(temp instanceof RaceCar)
         {
+            System.out.println();
             System.out.println("This is a race car: ");
             ((RaceCar)temp).StartEngine();
             ((RaceCar) temp).Boost();
@@ -24,6 +25,7 @@ public class Main {
         }
         else if(temp instanceof Truck)
         {
+            System.out.println();
             System.out.println("This is a truck: ");
             ((Truck)temp).StartEngine();
             ((Truck) temp).Load();
@@ -31,25 +33,31 @@ public class Main {
         }
         else if(temp instanceof Car)
         {
+            System.out.println();
             System.out.println("This is a car: ");
             ((Car)temp).StartEngine();
             ((Car) temp).Drive();
         }
         else if(temp instanceof Plane)
         {
+            System.out.println();
             System.out.println("This is a plane: ");
             ((Plane)temp).StartEngine();
             ((Plane) temp).Fly();
         }
         else if(temp instanceof Ship)
         {
+            System.out.println();
             System.out.println("This is a ship: ");
             ((Ship)temp).StartEngine();
             ((Ship) temp).Swim();
         }
         else
+        {
+            System.out.println();
             System.out.println("This is a vehicle: ");
             temp.StartEngine();
+        }
         }
     }
 }
