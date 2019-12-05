@@ -9,7 +9,7 @@ public class Truck extends Car
     }
 
     @Override
-    double getFuelNeeds()
+    public double getFuelNeeds()
     {
         return 500; //truck ma 500l paliwa
     }

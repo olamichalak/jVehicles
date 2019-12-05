@@ -9,7 +9,7 @@ public class RaceCar extends Car
     }
 
     @Override
-    double getFuelNeeds() {
+    public double getFuelNeeds() {
         return 150; //sportowe auto ma 150l paliwa
     }
 }

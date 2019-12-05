@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class Vehicle
+public abstract class Vehicle implements Go, Stop, GetDistance, GetFuelNeeds
 {
 
     private String name;
@@ -10,8 +10,8 @@ public abstract class Vehicle
         this.name = name;
     }
 
-    abstract double getFuelNeeds();
-    abstract double getDistance();
+   // abstract double getFuelNeeds();
+   // abstract double getDistance();
 
     public double calculateFuelConsumption()
     {

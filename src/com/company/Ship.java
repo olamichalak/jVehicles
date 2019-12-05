@@ -15,13 +15,13 @@ public class Ship extends Vehicle implements Sailing
     }
 
     @Override
-    double getFuelNeeds()
+    public double getFuelNeeds()
     {
         return 1000; //statek ma 1000l paliwa
     }
 
     @Override
-    double getDistance()
+    public double getDistance()
     {
         return 40; //przeplywa 40km
     }

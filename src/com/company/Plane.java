@@ -27,13 +27,13 @@ public class Plane extends Vehicle implements Flying
     }
 
     @Override
-    double getFuelNeeds()
+    public double getFuelNeeds()
     {
         return 20000; //samolot ma 20000l paliwa
     }
 
     @Override
-    double getDistance()
+    public double getDistance()
     {
         return 20; //200km
     }
