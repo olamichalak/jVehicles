@@ -3,9 +3,14 @@ package com.company;
 public class Truck extends Car
 {
 
-    public void Load()
+    public Truck(String name)
     {
-        System.out.println("The truck is loaded!");
+        super(name);
     }
 
+    @Override
+    double getFuelNeeds()
+    {
+        return 500; //truck ma 500l paliwa
+    }
 }

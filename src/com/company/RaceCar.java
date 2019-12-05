@@ -3,9 +3,13 @@ package com.company;
 public class RaceCar extends Car
 {
 
-    public void Boost()
+    public RaceCar(String name)
     {
-        System.out.println("The race car is in the sport mode!");
+        super(name);
     }
 
+    @Override
+    double getFuelNeeds() {
+        return 150; //sportowe auto ma 150l paliwa
+    }
 }

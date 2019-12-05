@@ -5,59 +5,23 @@ public class Main {
     public static void main(String[] args)
     {
 
-        Vehicle vehicle = new Vehicle();
-        Vehicle plane = new Plane();
-        Vehicle car = new Car();
-        Vehicle ship = new Ship();
-        Vehicle truck = new Truck();
-        Vehicle racecar = new RaceCar();
-        Vehicle[] vehicles = {vehicle, plane, car, ship, truck, racecar};
+        //Vehicle vehicle = new Vehicle(); //juz nie mozna, bo ta klasa jest abstract
+
+        Vehicle plane = new Plane("Samolot");
+        Vehicle car = new Car("Samochód");
+        Vehicle ship = new Ship("Statek");
+        Vehicle truck = new Truck("Ciężarówka");
+        Vehicle racecar = new RaceCar("Auto wyścigowe");
+        Vehicle[] vehicles = {plane, car, ship, truck, racecar};
 
         for (Vehicle temp: vehicles)
         {
-        if(temp instanceof RaceCar)
-        {
             System.out.println();
-            System.out.println("This is a race car: ");
-            ((RaceCar)temp).StartEngine();
-            ((RaceCar) temp).Boost();
-            ((RaceCar) temp).Drive();
-        }
-        else if(temp instanceof Truck)
-        {
-            System.out.println();
-            System.out.println("This is a truck: ");
-            ((Truck)temp).StartEngine();
-            ((Truck) temp).Load();
-            ((Truck) temp).Drive();
-        }
-        else if(temp instanceof Car)
-        {
-            System.out.println();
-            System.out.println("This is a car: ");
-            ((Car)temp).StartEngine();
-            ((Car) temp).Drive();
-        }
-        else if(temp instanceof Plane)
-        {
-            System.out.println();
-            System.out.println("This is a plane: ");
-            ((Plane)temp).StartEngine();
-            ((Plane) temp).Fly();
-        }
-        else if(temp instanceof Ship)
-        {
-            System.out.println();
-            System.out.println("This is a ship: ");
-            ((Ship)temp).StartEngine();
-            ((Ship) temp).Swim();
-        }
-        else
-        {
-            System.out.println();
-            System.out.println("This is a vehicle: ");
-            temp.StartEngine();
-        }
+            temp.go();
+            if (temp instanceof Flying)
+                ((Flying) temp).callAirControl();
+            temp.stop();
+            System.out.println("Zużycie paliwa: " + temp.calculateFuelConsumption());
         }
     }
 }

@@ -3,15 +3,20 @@ package com.company;
 public class Car extends Vehicle
 {
 
-    @Override
-    public void StartEngine() {
-        //super.StartEngine();
-        System.out.println("Engine of the car started");
-    }
-
-    public void Drive()
+    public Car(String name)
     {
-        System.out.println("The vehicle is driving!");
+        super(name);
     }
 
+    @Override
+    double getFuelNeeds()
+    {
+        return 100; //zwykly car ma 100l paliwa
+    }
+
+    @Override
+    double getDistance()
+    {
+        return 10;
+    }
 }

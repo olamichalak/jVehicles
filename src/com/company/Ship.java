@@ -1,17 +1,34 @@
 package com.company;
 
-public class Ship extends Vehicle
+public class Ship extends Vehicle implements Sailing
 {
 
-    @Override
-    public void StartEngine() {
-        //super.StartEngine();
-        System.out.println("Engine of the ship started");
-    }
-
-    public void Swim()
+    public Ship(String name)
     {
-        System.out.println("The vehicle is swimming!");
+        super(name);
     }
 
+    @Override
+    public void dock()
+    {
+        System.out.println("Przybyłeś do portu!");
+    }
+
+    @Override
+    double getFuelNeeds()
+    {
+        return 1000; //statek ma 1000l paliwa
+    }
+
+    @Override
+    double getDistance()
+    {
+        return 40; //przeplywa 40km
+    }
+
+    @Override
+    public void stop()
+    {
+        dock();
+    }
 }

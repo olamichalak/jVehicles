@@ -1,11 +1,30 @@
 package com.company;
 
-public class Vehicle
+public abstract class Vehicle
 {
 
-    public void StartEngine()
+    private String name;
+
+    public Vehicle(String name)
     {
-        System.out.println("Engine Started");
+        this.name = name;
     }
 
+    abstract double getFuelNeeds();
+    abstract double getDistance();
+
+    public double calculateFuelConsumption()
+    {
+        return getFuelNeeds()/getDistance();
+    }
+
+    public void go()
+    {
+        System.out.println(name + " jedzie");
+    }
+
+    public void stop()
+    {
+        System.out.println(name + " zatrzymuje się");
+    }
 }
